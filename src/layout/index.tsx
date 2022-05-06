@@ -6,7 +6,7 @@ const Footer = Layout.Footer;
 const Content = Layout.Content;
 
 const Layouts = () => {
-  return <div className='layout-basic-demo'>
+  return <div>
     <Layout style={{ height: '100vh' }}>
       <Header>Header</Header>
       <Content>Content</Content>
