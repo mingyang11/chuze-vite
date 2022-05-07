@@ -1,0 +1,8 @@
+// 全局样式引入使用， 如果在vite.config.ts配置文件中配置了全局样式引入后就不需要在这里手动引入了
+// @import '../variable.scss';
+
+.header {
+  background-color: $themeColor;
+  height: 60px;
+  text-decoration: dashed;
+}
