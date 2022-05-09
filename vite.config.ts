@@ -10,6 +10,11 @@ const variablePath = normalizePath(path.resolve('./src/variable.scss'));
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': './src'
+    }
+  },
   /**
    * root是用来设置根目录的位置，目的是可以访问到根目录下的index.html文件。如果模版文件在src外，这个就不生效了
    */
@@ -30,5 +35,9 @@ export default defineConfig({
         })
       ]
     }
+  },
+  server: {
+    open: true,
+    port: 3301
   }
 })

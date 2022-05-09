@@ -6,7 +6,6 @@ const showRoutes = [
   {
     path: '/dashboard',
     pageName: '主页',
-    children: []
   },
 ]
 
