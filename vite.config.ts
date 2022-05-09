@@ -13,7 +13,7 @@ export default defineConfig({
   /**
    * root是用来设置根目录的位置，目的是可以访问到根目录下的index.html文件。如果模版文件在src外，这个就不生效了
    */
-  root: path.join(__dirname, 'src'),
+  // root: path.join(__dirname, 'src'),
   plugins: [react()],
   // 配置全局样式注入，这样就不用在每个文件入口处手动引入全局样式了
   css: {
