@@ -1,6 +1,6 @@
 const showRoutes = [
   {
-    path: '/home',
+    path: '/',
     pageName: '首页',
   },
   {
