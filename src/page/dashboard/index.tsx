@@ -1,5 +1,13 @@
-const Dashboard = () => {
-  return <div>Dashboard页</div>
-}
+import styles from './index.module.scss';
+import { ReactComponent as ReactLogo } from '@assets/icons/logo.svg';
 
-export default Dashboard
+const Dashboard = () => {
+  return (
+    <div className={styles.pageContent}>
+      Dashboard页
+      <ReactLogo />
+    </div>
+  );
+};
+
+export default Dashboard;
