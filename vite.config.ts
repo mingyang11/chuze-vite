@@ -4,6 +4,8 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import autoprefixer from 'autoprefixer';
 import svgr from "vite-plugin-svgr";
+import { myVitePlugin } from './myPlugins/pluginDemo/plugin-a.js'
+import virtual from './myPlugins/virtual-module/index'
 // import viteImagemin from 'vite-plugin-imagemin';
 
 // 全局 scss 文件的路径
@@ -25,6 +27,8 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
+    myVitePlugin(),
+    virtual()
     // 图片压缩插件
     // viteImagemin({
     //   // 无损压缩配置，无损压缩下图片质量不会变差
