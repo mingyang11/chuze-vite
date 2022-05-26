@@ -8,6 +8,7 @@ specifiers:
   '@vitejs/plugin-react': ^1.3.0
   autoprefixer: ^10.4.7
   eslint: ^8.15.0
+  lodash: ^4.17.21
   prettier: ^2.6.2
   react: ^18.0.0
   react-dom: ^18.0.0
@@ -20,6 +21,7 @@ specifiers:
 
 dependencies:
   '@arco-design/web-react': 2.32.2_47ae209ab5c2ea051c9a2540426c6b2f
+  lodash: 4.17.21
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-router: 6.3.0_react@18.1.0

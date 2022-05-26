@@ -75,6 +75,14 @@ export default defineConfig({
   },
   server: {
     open: true,
-    port: 3301
-  }
+    port: 8000
+  },
+  optimizeDeps: {
+    // 预购建入口文件
+    entries: ['./index.html'],
+    // 预购建依赖,将包含的第三方依赖强制预购建
+    include: ["lodash", "react"],
+    exclude: [],
+    esbuildOptions: {},
+  },
 })
