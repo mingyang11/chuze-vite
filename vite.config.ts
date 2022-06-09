@@ -6,6 +6,8 @@ import autoprefixer from 'autoprefixer';
 import svgr from "vite-plugin-svgr";
 import { myVitePlugin } from './myPlugins/pluginDemo/plugin-a.js'
 import virtual from './myPlugins/virtual-module/index'
+import htmlPlugin from './myPlugins/pluginReplaceHtml/index'
+import inspect from 'vite-plugin-inspect';
 // import viteImagemin from 'vite-plugin-imagemin';
 
 // 全局 scss 文件的路径
@@ -25,9 +27,11 @@ export default defineConfig({
    */
   // root: path.join(__dirname, 'src'),
   plugins: [
+    htmlPlugin(),
     react(),
     svgr(),
     myVitePlugin(),
+    inspect()
     // virtual()
     // 图片压缩插件
     // viteImagemin({
