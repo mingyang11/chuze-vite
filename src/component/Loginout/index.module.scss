@@ -1,16 +1,6 @@
 // 全局样式引入使用， 如果在vite.config.ts配置文件中配置了全局样式引入后就不需要在这里手动引入了
 // @import '../variable.scss';
-
-.header {
-  background-color: $themeColor;
-  height: 6vh;
-}
-
 .content {
-  height: 91vh;
-}
-
-.footer {
-  background-color: $footerColor;
-  height: 3vh;
+  height: 100%;
+  background: url('@assets/images/earth.jpeg') no-repeat;
 }

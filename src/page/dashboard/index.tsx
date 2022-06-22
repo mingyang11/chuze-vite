@@ -6,7 +6,7 @@ const Dashboard = () => {
   return (
     <div className={styles.pageContent}>
       Dashboard页
-      <ReactLogo />
+      {/* <ReactLogo /> */}
     </div>
   );
 };

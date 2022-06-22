@@ -1,26 +1,21 @@
 import { Layout } from '@arco-design/web-react';
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import HeaderComponent from '../component/HeaderComponent'
-import routeList from '../router/rooutes'
+import routeList from '../router/routes'
 import styles from './index.module.scss';
 
 const Header = Layout.Header;
 const Footer = Layout.Footer;
 const Content = Layout.Content;
 
+
 const Layouts = () => {
   return <div>
     <Layout style={{ height: '100vh' }}>
       <Header className={styles.header}>
         <HeaderComponent />
-          {/* {
-            showRoutes.map((item) => {
-              const {path, pageName } = item
-              return <Link to={path} key={path}>{pageName}</Link>
-            })
-          } */}
         </Header>
-      <Content>
+      <Content className={styles.content}>
         <Routes>
           {
             routeList.map((item) => {

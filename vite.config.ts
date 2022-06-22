@@ -8,6 +8,7 @@ import { myVitePlugin } from './myPlugins/pluginDemo/plugin-a.js'
 import virtual from './myPlugins/virtual-module/index'
 import htmlPlugin from './myPlugins/pluginReplaceHtml/index'
 import inspect from 'vite-plugin-inspect';
+import legacy from '@vitejs/plugin-legacy';
 // import viteImagemin from 'vite-plugin-imagemin';
 
 // 全局 scss 文件的路径
@@ -30,8 +31,12 @@ export default defineConfig({
     htmlPlugin(),
     react(),
     svgr(),
-    myVitePlugin(),
-    inspect()
+    // myVitePlugin(),
+    inspect(),
+    legacy({
+      // 设置目标浏览器，browserslist 配置语法
+      targets: ['ie >= 11'],
+    })
     // virtual()
     // 图片压缩插件
     // viteImagemin({
@@ -75,7 +80,20 @@ export default defineConfig({
   },
   // 设置静态资源界限，超过界限值则生成单独文件，否则作为base64字符串插入代码中
   build: {
-    assetsInlineLimit: 8 * 1024
+    assetsInlineLimit: 8 * 1024,
+    rollupOptions: {
+      output: {
+        // manualChunks 配置
+        manualChunks: {
+          // 将 React 相关库打包成单独的 chunk 中
+          'react-vendor': ['react', 'react-dom'],
+          // 将 Lodash 库的代码单独打包
+          // 'lodash': ['lodash-es'],
+          // 将组件库的代码打包
+          'library': ['@arco-design/web-react'],
+        },
+      },
+    }
   },
   server: {
     open: true,
