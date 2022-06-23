@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Form, Input, Button } from '@arco-design/web-react';
-import userApi from '../../services/user'
+// import userApi from '../../services/user'
 import styles from './index.module.scss'
 
 const FormItem = Form.Item;
@@ -14,9 +14,9 @@ const Login = () => {
   const [form] = Form.useForm();
   
   const handleLoginClick = (values:formInterface) => {
-    userApi.login(values).then((res) => {
-      console.log(res, 'res');
-    })
+    // userApi.login(values).then((res) => {
+    //   console.log(res, 'res');
+    // })
   }
 
   return <div className={styles.content}>

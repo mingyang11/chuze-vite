@@ -1,11 +1,11 @@
-import requestFetch from '../utils/requestFetch.js'
+// import requestFetch from '../utils/requestFetch.js'
 
-interface commonInterface {
-  [prop: string]: any
-}
+// interface commonInterface {
+//   [prop: string]: any
+// }
 
-export default {
-  async getUserlist(params: commonInterface) {
-    return await requestFetch.get('/api/userlist', { params })
-  }
-}
+// export default {
+//   async getUserlist(params: commonInterface) {
+//     return await requestFetch.get('/api/userlist', { params })
+//   }
+// }
